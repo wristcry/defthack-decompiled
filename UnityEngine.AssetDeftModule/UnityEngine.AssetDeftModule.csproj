@@ -7,7 +7,7 @@
     <ProjectGuid>{3DE8701C-4CFB-403C-BA65-027C8E2A7A3A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>UnityEngine.AssetDeftModule</RootNamespace>
-    <AssemblyName>UnityEngine.AssetDeftModule</AssemblyName>
+    <AssemblyName>defthack</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -34,14 +34,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\get_cracked_bois\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\libs\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp-firstpass">
-      <HintPath>..\..\get_cracked_bois\Assembly-CSharp-firstpass.dll</HintPath>
+      <HintPath>..\libs\Assembly-CSharp-firstpass.dll</HintPath>
     </Reference>
-    <Reference Include="DH-Assembly-CSharp" />
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\get_cracked_bois\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <HintPath>..\..\get_cracked_bois\System.dll</HintPath>
@@ -50,28 +50,31 @@
       <HintPath>..\..\get_cracked_bois\System.Core.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AnimationModule">
-      <HintPath>..\..\get_cracked_bois\UnityEngine.AnimationModule.dll</HintPath>
+      <HintPath>..\libs\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>..\libs\UnityEngine.AssetBundleModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AudioModule">
-      <HintPath>..\..\get_cracked_bois\UnityEngine.AudioModule.dll</HintPath>
+      <HintPath>..\libs\UnityEngine.AudioModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\..\get_cracked_bois\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>..\libs\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ImageConversionModule">
-      <HintPath>..\..\get_cracked_bois\UnityEngine.ImageConversionModule.dll</HintPath>
+      <HintPath>..\libs\UnityEngine.ImageConversionModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.IMGUIModule">
-      <HintPath>..\..\get_cracked_bois\UnityEngine.IMGUIModule.dll</HintPath>
+      <HintPath>..\libs\UnityEngine.IMGUIModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.PhysicsModule">
-      <HintPath>..\..\get_cracked_bois\UnityEngine.PhysicsModule.dll</HintPath>
+      <HintPath>..\libs\UnityEngine.PhysicsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TextRenderingModule">
-      <HintPath>..\..\get_cracked_bois\UnityEngine.TextRenderingModule.dll</HintPath>
+      <HintPath>..\libs\UnityEngine.TextRenderingModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestWWWModule">
-      <HintPath>..\..\get_cracked_bois\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+      <HintPath>..\libs\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

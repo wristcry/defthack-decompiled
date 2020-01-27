@@ -26,7 +26,7 @@ namespace DeftHackFree
 				AttributeManager.Init();
 				AssetManager.Init();
 				ConfigManager.Init();
-				MenuComponent.SetGUIColors();
+				//MenuComponent.SetGUIColors();
 				SkinsUtilities.ApplyFromConfig();
 			}
 			catch (Exception exception)

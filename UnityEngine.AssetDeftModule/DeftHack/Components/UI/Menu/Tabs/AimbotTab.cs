@@ -32,7 +32,7 @@ namespace DeftHack.Components.UI.Menu.Tabs
 					bool flag3 = flag2;
 					if (flag3)
 					{
-						GUILayout.Label("Радиус сферы: " + Math.Round((double)SphereOptions.SphereRadius, 2) + "m", Prefab._TextStyle, Array.Empty<GUILayoutOption>());
+						GUILayout.Label("Радиус сферы: " + System.Math.Round((double)SphereOptions.SphereRadius, 2) + "m", Prefab._TextStyle, Array.Empty<GUILayoutOption>());
 						Prefab.Slider(0f, 16f, ref SphereOptions.SphereRadius, 200);
 					}
 					GUILayout.Space(5f);

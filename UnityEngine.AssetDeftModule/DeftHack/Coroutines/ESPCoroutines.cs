@@ -174,14 +174,13 @@ namespace DeftHack.Coroutines
 						bool flag6 = !flag2;
 						if (flag6)
 						{
-							ESPCoroutines.<>c__DisplayClass4_0 CS$<>8__locals1 = new ESPCoroutines.<>c__DisplayClass4_0();
-							CS$<>8__locals1.pPos = OptimizationVariables.MainPlayer.transform.position;
+							Vector3 pPos = OptimizationVariables.MainPlayer.transform.position;
 							switch (target)
 							{
 							case ESPTarget.Игроки:
 							{
 								SteamPlayer[] objarray = (from p in Provider.clients
-								orderby VectorUtilities.GetDistance(CS$<>8__locals1.pPos, p.player.transform.position) descending
+								orderby VectorUtilities.GetDistance(pPos, p.player.transform.position) descending
 								select p).ToArray<SteamPlayer>();
 								bool useObjectCap = vis.UseObjectCap;
 								bool flag7 = useObjectCap;
@@ -210,7 +209,7 @@ namespace DeftHack.Coroutines
 							case ESPTarget.Зомби:
 							{
 								Zombie[] objarr = (from obj in ZombieManager.regions.SelectMany((ZombieRegion r) => r.zombies)
-								orderby VectorUtilities.GetDistance(CS$<>8__locals1.pPos, obj.transform.position) descending
+								orderby VectorUtilities.GetDistance(pPos, obj.transform.position) descending
 								select obj).ToArray<Zombie>();
 								bool useObjectCap2 = vis.UseObjectCap;
 								bool flag9 = useObjectCap2;
@@ -231,7 +230,7 @@ namespace DeftHack.Coroutines
 							case ESPTarget.Предметы:
 							{
 								InteractableItem[] objarr2 = (from obj in UnityEngine.Object.FindObjectsOfType<InteractableItem>()
-								orderby VectorUtilities.GetDistance(CS$<>8__locals1.pPos, obj.transform.position) descending
+								orderby VectorUtilities.GetDistance(pPos, obj.transform.position) descending
 								select obj).ToArray<InteractableItem>();
 								bool useObjectCap3 = vis.UseObjectCap;
 								bool flag10 = useObjectCap3;
@@ -257,7 +256,7 @@ namespace DeftHack.Coroutines
 							case ESPTarget.Турели:
 							{
 								InteractableSentry[] objarr3 = (from obj in UnityEngine.Object.FindObjectsOfType<InteractableSentry>()
-								orderby VectorUtilities.GetDistance(CS$<>8__locals1.pPos, obj.transform.position) descending
+								orderby VectorUtilities.GetDistance(pPos, obj.transform.position) descending
 								select obj).ToArray<InteractableSentry>();
 								bool useObjectCap4 = vis.UseObjectCap;
 								bool flag12 = useObjectCap4;
@@ -278,7 +277,7 @@ namespace DeftHack.Coroutines
 							case ESPTarget.Кровати:
 							{
 								InteractableBed[] objarr4 = (from obj in UnityEngine.Object.FindObjectsOfType<InteractableBed>()
-								orderby VectorUtilities.GetDistance(CS$<>8__locals1.pPos, obj.transform.position) descending
+								orderby VectorUtilities.GetDistance(pPos, obj.transform.position) descending
 								select obj).ToArray<InteractableBed>();
 								bool useObjectCap5 = vis.UseObjectCap;
 								bool flag13 = useObjectCap5;
@@ -299,7 +298,7 @@ namespace DeftHack.Coroutines
 							case ESPTarget.КлеймФлаги:
 							{
 								InteractableClaim[] objarr5 = (from obj in UnityEngine.Object.FindObjectsOfType<InteractableClaim>()
-								orderby VectorUtilities.GetDistance(CS$<>8__locals1.pPos, obj.transform.position) descending
+								orderby VectorUtilities.GetDistance(pPos, obj.transform.position) descending
 								select obj).ToArray<InteractableClaim>();
 								bool useObjectCap6 = vis.UseObjectCap;
 								bool flag14 = useObjectCap6;
@@ -320,7 +319,7 @@ namespace DeftHack.Coroutines
 							case ESPTarget.Транспорт:
 							{
 								InteractableVehicle[] objarr6 = (from obj in UnityEngine.Object.FindObjectsOfType<InteractableVehicle>()
-								orderby VectorUtilities.GetDistance(CS$<>8__locals1.pPos, obj.transform.position) descending
+								orderby VectorUtilities.GetDistance(pPos, obj.transform.position) descending
 								select obj).ToArray<InteractableVehicle>();
 								bool useObjectCap7 = vis.UseObjectCap;
 								bool flag15 = useObjectCap7;
@@ -346,7 +345,7 @@ namespace DeftHack.Coroutines
 							case ESPTarget.Ящики:
 							{
 								InteractableStorage[] objarr7 = (from obj in UnityEngine.Object.FindObjectsOfType<InteractableStorage>()
-								orderby VectorUtilities.GetDistance(CS$<>8__locals1.pPos, obj.transform.position) descending
+								orderby VectorUtilities.GetDistance(pPos, obj.transform.position) descending
 								select obj).ToArray<InteractableStorage>();
 								bool useObjectCap8 = vis.UseObjectCap;
 								bool flag17 = useObjectCap8;
@@ -367,7 +366,7 @@ namespace DeftHack.Coroutines
 							case ESPTarget.Генераторы:
 							{
 								InteractableGenerator[] objarr8 = (from obj in UnityEngine.Object.FindObjectsOfType<InteractableGenerator>()
-								orderby VectorUtilities.GetDistance(CS$<>8__locals1.pPos, obj.transform.position) descending
+								orderby VectorUtilities.GetDistance(pPos, obj.transform.position) descending
 								select obj).ToArray<InteractableGenerator>();
 								bool useObjectCap9 = vis.UseObjectCap;
 								bool flag18 = useObjectCap9;
@@ -388,7 +387,7 @@ namespace DeftHack.Coroutines
 							case ESPTarget.Животные:
 							{
 								Animal[] objarr9 = (from obj in UnityEngine.Object.FindObjectsOfType<Animal>()
-								orderby VectorUtilities.GetDistance(CS$<>8__locals1.pPos, obj.transform.position) descending
+								orderby VectorUtilities.GetDistance(pPos, obj.transform.position) descending
 								select obj).ToArray<Animal>();
 								bool useObjectCap10 = vis.UseObjectCap;
 								bool flag19 = useObjectCap10;
@@ -409,7 +408,7 @@ namespace DeftHack.Coroutines
 							case ESPTarget.Ловшуки:
 							{
 								InteractableTrap[] objarr10 = (from obj in UnityEngine.Object.FindObjectsOfType<InteractableTrap>()
-								orderby VectorUtilities.GetDistance(CS$<>8__locals1.pPos, obj.transform.position) descending
+								orderby VectorUtilities.GetDistance(pPos, obj.transform.position) descending
 								select obj).ToArray<InteractableTrap>();
 								bool useObjectCap11 = vis.UseObjectCap;
 								bool flag20 = useObjectCap11;
@@ -430,7 +429,7 @@ namespace DeftHack.Coroutines
 							case ESPTarget.Аирдропы:
 							{
 								Carepackage[] objarr11 = (from obj in UnityEngine.Object.FindObjectsOfType<Carepackage>()
-								orderby VectorUtilities.GetDistance(CS$<>8__locals1.pPos, obj.transform.position) descending
+								orderby VectorUtilities.GetDistance(pPos, obj.transform.position) descending
 								select obj).ToArray<Carepackage>();
 								bool useObjectCap12 = vis.UseObjectCap;
 								bool flag21 = useObjectCap12;
@@ -451,7 +450,7 @@ namespace DeftHack.Coroutines
 							case ESPTarget.Двери:
 							{
 								InteractableDoorHinge[] objarr12 = (from obj in UnityEngine.Object.FindObjectsOfType<InteractableDoorHinge>()
-								orderby VectorUtilities.GetDistance(CS$<>8__locals1.pPos, obj.transform.position) descending
+								orderby VectorUtilities.GetDistance(pPos, obj.transform.position) descending
 								select obj).ToArray<InteractableDoorHinge>();
 								bool useObjectCap13 = vis.UseObjectCap;
 								bool flag22 = useObjectCap13;
@@ -472,7 +471,7 @@ namespace DeftHack.Coroutines
 							case ESPTarget.Ягоды:
 							{
 								InteractableForage[] objarr13 = (from obj in UnityEngine.Object.FindObjectsOfType<InteractableForage>()
-								orderby VectorUtilities.GetDistance(CS$<>8__locals1.pPos, obj.transform.position) descending
+								orderby VectorUtilities.GetDistance(pPos, obj.transform.position) descending
 								select obj).ToArray<InteractableForage>();
 								bool useObjectCap14 = vis.UseObjectCap;
 								bool flag23 = useObjectCap14;
@@ -493,7 +492,7 @@ namespace DeftHack.Coroutines
 							case ESPTarget.Растения:
 							{
 								InteractableFarm[] objarr14 = (from obj in UnityEngine.Object.FindObjectsOfType<InteractableFarm>()
-								orderby VectorUtilities.GetDistance(CS$<>8__locals1.pPos, obj.transform.position) descending
+								orderby VectorUtilities.GetDistance(pPos, obj.transform.position) descending
 								select obj).ToArray<InteractableFarm>();
 								bool useObjectCap15 = vis.UseObjectCap;
 								bool flag24 = useObjectCap15;
@@ -514,7 +513,7 @@ namespace DeftHack.Coroutines
 							case ESPTarget.C4:
 							{
 								InteractableCharge[] objarr15 = (from obj in UnityEngine.Object.FindObjectsOfType<InteractableCharge>()
-								orderby VectorUtilities.GetDistance(CS$<>8__locals1.pPos, obj.transform.position) descending
+								orderby VectorUtilities.GetDistance(pPos, obj.transform.position) descending
 								select obj).ToArray<InteractableCharge>();
 								bool useObjectCap16 = vis.UseObjectCap;
 								bool flag25 = useObjectCap16;
@@ -535,7 +534,7 @@ namespace DeftHack.Coroutines
 							case ESPTarget.Fire:
 							{
 								InteractableFire[] objarr16 = (from obj in UnityEngine.Object.FindObjectsOfType<InteractableFire>()
-								orderby VectorUtilities.GetDistance(CS$<>8__locals1.pPos, obj.transform.position) descending
+								orderby VectorUtilities.GetDistance(pPos, obj.transform.position) descending
 								select obj).ToArray<InteractableFire>();
 								bool useObjectCap17 = vis.UseObjectCap;
 								bool flag26 = useObjectCap17;
@@ -556,7 +555,7 @@ namespace DeftHack.Coroutines
 							case ESPTarget.Лампы:
 							{
 								InteractableSpot[] objarr17 = (from obj in UnityEngine.Object.FindObjectsOfType<InteractableSpot>()
-								orderby VectorUtilities.GetDistance(CS$<>8__locals1.pPos, obj.transform.position) descending
+								orderby VectorUtilities.GetDistance(pPos, obj.transform.position) descending
 								select obj).ToArray<InteractableSpot>();
 								bool useObjectCap18 = vis.UseObjectCap;
 								bool flag27 = useObjectCap18;
@@ -577,7 +576,7 @@ namespace DeftHack.Coroutines
 							case ESPTarget.Топливо:
 							{
 								InteractableObjectResource[] objarr18 = (from obj in UnityEngine.Object.FindObjectsOfType<InteractableObjectResource>()
-								orderby VectorUtilities.GetDistance(CS$<>8__locals1.pPos, obj.transform.position) descending
+								orderby VectorUtilities.GetDistance(pPos, obj.transform.position) descending
 								select obj).ToArray<InteractableObjectResource>();
 								bool useObjectCap19 = vis.UseObjectCap;
 								bool flag28 = useObjectCap19;
@@ -598,7 +597,7 @@ namespace DeftHack.Coroutines
 							case ESPTarget.Генератор_безопасной_зоны:
 							{
 								InteractableSafezone[] objarr19 = (from obj in UnityEngine.Object.FindObjectsOfType<InteractableSafezone>()
-								orderby VectorUtilities.GetDistance(CS$<>8__locals1.pPos, obj.transform.position) descending
+								orderby VectorUtilities.GetDistance(pPos, obj.transform.position) descending
 								select obj).ToArray<InteractableSafezone>();
 								bool useObjectCap20 = vis.UseObjectCap;
 								bool flag29 = useObjectCap20;
@@ -619,7 +618,7 @@ namespace DeftHack.Coroutines
 							case ESPTarget.Генератор_Воздуха:
 							{
 								InteractableOxygenator[] objarr20 = (from obj in UnityEngine.Object.FindObjectsOfType<InteractableOxygenator>()
-								orderby VectorUtilities.GetDistance(CS$<>8__locals1.pPos, obj.transform.position) descending
+								orderby VectorUtilities.GetDistance(pPos, obj.transform.position) descending
 								select obj).ToArray<InteractableOxygenator>();
 								bool useObjectCap21 = vis.UseObjectCap;
 								bool flag30 = useObjectCap21;
@@ -638,7 +637,6 @@ namespace DeftHack.Coroutines
 								break;
 							}
 							}
-							CS$<>8__locals1 = null;
 						}
 						num = i;
 						vis = null;

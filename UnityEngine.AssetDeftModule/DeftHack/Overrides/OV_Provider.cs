@@ -47,13 +47,6 @@ namespace DeftHack.Overrides
 			}
 		}
 
-		// Token: 0x06000114 RID: 276 RVA: 0x00002777 File Offset: 0x00000977
-		[Override(typeof(Provider), "OnApplicationQuit", BindingFlags.Instance | BindingFlags.NonPublic, 0)]
-		public static void OV_OnApplicationQuit()
-		{
-			Process.GetCurrentProcess().Kill();
-		}
-
 		// Token: 0x040000A8 RID: 168
 		public static bool IsConnected;
 	}

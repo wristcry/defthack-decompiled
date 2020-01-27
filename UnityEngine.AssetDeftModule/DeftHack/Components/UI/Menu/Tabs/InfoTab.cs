@@ -12,10 +12,14 @@ namespace DeftHack.Components.UI.Menu.Tabs
 		{
 			Prefab.MenuArea(new Rect(0f, 0f, 466f, 436f), "ИНФО", delegate
 			{
-				GUILayout.Label("Cracked by OwO | vk.com/cryingkiddo", Prefab._TextStyle, new GUILayoutOption[0]);
+                GUILayout.Label("Next time use something better than Enigma protector :^)", Prefab._TextStyle, new GUILayoutOption[0]);
+                GUILayout.Space(2f);
+                GUILayout.Label("Cracked by OwO | vk.com/yanderehook", Prefab._TextStyle, new GUILayoutOption[0]);
 				GUILayout.Space(2f);
-				GUILayout.Label("Next time use something better than Enigma protector :^)", Prefab._TextStyle, new GUILayoutOption[0]);
-				GUILayout.Space(4f);
+                GUILayout.Label("hi yougame.bz ;)", Prefab._TextStyle, new GUILayoutOption[0]);
+                GUILayout.Space(2f);
+                GUILayout.Label("hi yanderehook.pw ;)", Prefab._TextStyle, new GUILayoutOption[0]);
+                GUILayout.Space(4f);
 				if (Provider.isConnected)
 				{
 					GUILayout.Label("Ваш SteamID64: ", Prefab._TextStyle, new GUILayoutOption[0]);
@@ -29,10 +33,10 @@ namespace DeftHack.Components.UI.Menu.Tabs
 				}
 				GUILayout.Label("Пожелания и жалобы по читу сюда:", Prefab._TextStyle, new GUILayoutOption[0]);
 				GUILayout.TextField("http://vk.me/beyondcheat (owned)", Prefab._TextStyle, new GUILayoutOption[0]);
-				GUILayout.Space(2f);
+				GUILayout.Space(4f);
 				if (Prefab.Button("OwO <3", 200f, 25f, new GUILayoutOption[0]))
 				{
-					Application.OpenURL("https://vk.com/cryingkiddo");
+					Application.OpenURL("https://vk.com/yanderehook");
 				}
 			});
 		}

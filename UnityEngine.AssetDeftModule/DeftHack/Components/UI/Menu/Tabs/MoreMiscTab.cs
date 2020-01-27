@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Reflection;
-using Assembly_CSharp;
+
 using DeftHack.Coroutines;
 using DeftHack.Managers.Main;
 using DeftHack.Managers.Submanagers;
@@ -144,31 +144,6 @@ namespace DeftHack.Components.UI.Menu.Tabs
 				if (flag8)
 				{
 					PlayerCrashThread.CrashTargets.Clear();
-				}
-				GUILayout.Space(5f);
-				bool flag9 = Prefab.Button("Убрать воду", 200f, 25f, new GUILayoutOption[0]);
-				if (flag9)
-				{
-					Main.SeaLevel();
-				}
-				GUILayout.Space(5f);
-				bool flag10 = Provider.cameraMode != ECameraMode.BOTH;
-				if (flag10)
-				{
-					bool flag11 = Prefab.Button("Включить 3-е лицо", 200f, 25f, new GUILayoutOption[0]);
-					if (flag11)
-					{
-						Main.Face3();
-					}
-				}
-				bool flag12 = Provider.cameraMode == ECameraMode.BOTH;
-				if (flag12)
-				{
-					bool flag13 = Prefab.Button("Выключить 3-е лицо", 200f, 25f, new GUILayoutOption[0]);
-					if (flag13)
-					{
-						Main.Face1();
-					}
 				}
 				GUILayout.Space(5f);
 				bool flag14 = Prefab.Button("Отключить чит", 200f, 25f, Array.Empty<GUILayoutOption>());

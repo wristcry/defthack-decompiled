@@ -72,10 +72,6 @@ namespace DeftHack.Options.VisualOptions
 		[Save]
 		public static bool UsePlayerGroup = false;
 
-		// Token: 0x040000FF RID: 255
-		[Save]
-		public static SerializableColor SameGroupColor = Color.green.ToSerializableColor();
-
 		// Token: 0x04000100 RID: 256
 		[Save]
 		public static bool FilterItems = false;

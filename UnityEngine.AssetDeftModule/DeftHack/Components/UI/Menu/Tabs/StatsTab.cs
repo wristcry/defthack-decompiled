@@ -1,5 +1,5 @@
 ﻿using System;
-using Assembly_CSharp;
+
 using SDG.Unturned;
 using UnityEngine;
 
@@ -314,27 +314,6 @@ namespace DeftHack.Components.UI.Menu.Tabs
 							}
 						}
 					}
-				}
-			});
-			Prefab.MenuArea(new Rect(260f, 260f, 196f, 174f), "Счётчик убийств", delegate
-			{
-				GUILayout.Label("Возьмите в руки оружие\nсо счётчиком убийств!", Prefab._TextStyle, new GUILayoutOption[0]);
-				GUILayout.Space(5f);
-				bool flag = Prefab.Button("Найти оружие", 167f, 25f, Array.Empty<GUILayoutOption>()) && Player.player;
-				if (flag)
-				{
-					Main.CheckBut();
-				}
-				StatsTab.name = Prefab.TextField(StatsTab.name, StatsTab.labels, 100);
-				GUILayout.Space(7f);
-				StatsTab.count = Prefab.TextField(StatsTab.count, "Убийства:", 100);
-				GUILayout.Space(7f);
-				ushort num;
-				int num2;
-				bool flag2 = Prefab.Button("Изменить", 167f, 25f, Array.Empty<GUILayoutOption>()) && ushort.TryParse(StatsTab.id, out num) && int.TryParse(StatsTab.count, out num2);
-				if (flag2)
-				{
-					Main.ResetBtn(num, num2);
 				}
 			});
 		}

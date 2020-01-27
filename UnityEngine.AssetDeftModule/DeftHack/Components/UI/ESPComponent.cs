@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Assembly_CSharp;
+
 using DeftHack.Attributes;
 using DeftHack.Components.Basic;
 using DeftHack.Coroutines;
@@ -118,18 +118,7 @@ namespace DeftHack.Components.UI
 		// Token: 0x060001E2 RID: 482 RVA: 0x00010D04 File Offset: 0x0000EF04
 		public void Update()
 		{
-			bool noRain = MiscOptions.NoRain;
-			bool flag = noRain;
-			if (flag)
-			{
-				Main.NR();
-			}
-			bool noSnow = MiscOptions.NoSnow;
-			bool flag2 = noSnow;
-			if (flag2)
-			{
-				Main.NS();
-			}
+
 		}
 
 		// Token: 0x060001E3 RID: 483 RVA: 0x00010D38 File Offset: 0x0000EF38
@@ -228,7 +217,7 @@ namespace DeftHack.Components.UI
 											bounds = new Bounds(new Vector3(position3.x, position3.y + 1f, position3.z), new Vector3(localScale.x * 2f, localScale.y * 3f, localScale.z * 2f));
 										}
 										int textSize = DrawUtilities.GetTextSize(espvisual, distance);
-										double num = Math.Round(distance);
+										double num = System.Math.Round(distance);
 										string text = string.Format("<size={0}>", textSize);
 										string text2 = string.Format("<size={0}>", textSize);
 										switch (espobject.Target)
@@ -918,7 +907,7 @@ namespace DeftHack.Components.UI
 										bool flag100 = showAngle;
 										if (flag100)
 										{
-											double num7 = Math.Round(VectorUtilities.GetAngleDelta(position2, forward, position3), 2);
+											double num7 = System.Math.Round(VectorUtilities.GetAngleDelta(position2, forward, position3), 2);
 											text2 += string.Format("Угол: {0}°\n", num7);
 											bool flag101 = text != null;
 											bool flag102 = flag101;

@@ -34,33 +34,23 @@ namespace DeftHack.Utilities
 					Point = OptimizationVariables.MainPlayer.transform.position;
 					result = true;
 				}
-				else
-				{
-					Vector3[] vertices = Component.Sphere.GetComponent<MeshCollider>().sharedMesh.vertices;
-					IEnumerable<Vector3> source = vertices;
-					Func<Vector3, Vector3> selector;
-					Func<Vector3, Vector3> <>9__0;
-					if ((selector = <>9__0) == null)
-					{
-						selector = (<>9__0 = ((Vector3 v) => Component.Sphere.transform.TransformPoint(v)));
-					}
-					foreach (Vector3 vector in source.Select(selector).ToArray<Vector3>())
-					{
-						Vector3 direction = VectorUtilities.Normalize(vector - StartPos);
-						double distance = VectorUtilities.GetDistance(StartPos, vector);
-						bool flag5 = Physics.Raycast(StartPos, direction, (float)distance + 0.5f, RayMasks.DAMAGE_CLIENT);
-						bool flag6 = !flag5;
-						if (flag6)
-						{
-							Target.layer = layer;
-							Point = vector;
-							return true;
-						}
-					}
-					Target.layer = layer;
-					result = false;
-				}
-			}
+                else {
+                    Vector3[] vertices = Component.Sphere.GetComponent<MeshCollider>().sharedMesh.vertices;
+                    foreach (Vector3 vector in (from v in vertices
+                                                select Component.Sphere.transform.TransformPoint(v)).ToArray<Vector3>()) {
+                        Vector3 direction = VectorUtilities.Normalize(vector - StartPos);
+                        double distance = VectorUtilities.GetDistance(StartPos, vector);
+                        bool flag1337 = Physics.Raycast(StartPos, direction, (float)distance + 0.5f, RayMasks.DAMAGE_CLIENT);
+                        if (!flag1337) {
+                            Target.layer = layer;
+                            Point = vector;
+                            return true;
+                        }
+                    }
+                    Target.layer = layer;
+                    result = false;
+                }
+            }
 			return result;
 		}
 	}

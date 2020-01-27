@@ -1,5 +1,5 @@
 ﻿using System;
-using Assembly_CSharp;
+
 using DeftHack.Components.Basic;
 using DeftHack.Options;
 using DeftHack.Threads;
@@ -76,22 +76,11 @@ namespace DeftHack.Components.UI.Menu.Tabs
 							GUILayout.Space(2f);
 							GUILayout.Label("Множитель скорости: " + MiscOptions.SpeedMultiplier + "x", Prefab._TextStyle, Array.Empty<GUILayoutOption>());
 							GUILayout.Space(2f);
-							MiscOptions.SpeedMultiplier = (float)Math.Round((double)Prefab.Slider(0f, 10f, MiscOptions.SpeedMultiplier, 175), 2);
+							MiscOptions.SpeedMultiplier = (float)System.Math.Round((double)Prefab.Slider(0f, 10f, MiscOptions.SpeedMultiplier, 175), 2);
 							GUILayout.Space(4f);
 						}
 					}
 					GUILayout.Space(2f);
-					bool flag9 = Prefab.Button("Заправить машину", 200f, 25f, new GUILayoutOption[0]);
-					if (flag9)
-					{
-						Main.Fuel();
-					}
-					GUILayout.Space(2f);
-					bool flag10 = Prefab.Button("Проезд сквозь объекты" + MoreMiscTab.a(MiscTab.lb), 200f, 25f, new GUILayoutOption[0]);
-					if (flag10)
-					{
-						Main.ColliderVehicle();
-					}
 					GUILayout.Label("_________________________", Prefab._TextStyle, new GUILayoutOption[0]);
 				}
 				Prefab.Toggle("Быстрое снятия строений", ref MiscOptions.CustomSalvageTime, 17);
@@ -109,7 +98,7 @@ namespace DeftHack.Components.UI.Menu.Tabs
 					{
 						GUILayout.Label("Множитель скорости: " + MiscOptions.FlightSpeedMultiplier + "x", Prefab._TextStyle, Array.Empty<GUILayoutOption>());
 						GUILayout.Space(2f);
-						MiscOptions.FlightSpeedMultiplier = (float)Math.Round((double)Prefab.Slider(0f, 10f, MiscOptions.FlightSpeedMultiplier, 175), 2);
+						MiscOptions.FlightSpeedMultiplier = (float)System.Math.Round((double)Prefab.Slider(0f, 10f, MiscOptions.FlightSpeedMultiplier, 175), 2);
 					}
 				}
 				Prefab.Toggle("Дальность удара", ref MiscOptions.PunchSilentAim, 17);
@@ -135,17 +124,6 @@ namespace DeftHack.Components.UI.Menu.Tabs
 						OptimizationVariables.MainPlayer.look.orbitPosition = Vector3.zero;
 					}
 					Prefab.Toggle("Свободная камера", ref MiscOptions.Freecam, 17);
-					bool isOrbiting = OptimizationVariables.MainPlayer.look.isOrbiting;
-					bool flag17 = isOrbiting;
-					if (flag17)
-					{
-						bool flag18 = Prefab.Button("Вернуть камеру", 150f, 25f, Array.Empty<GUILayoutOption>());
-						bool flag19 = flag18;
-						if (flag19)
-						{
-							Main.ResetCam();
-						}
-					}
 				}
 				Prefab.Toggle("Краш сервера", ref ServerCrashThread.ServerCrashEnabled, 17);
 				Prefab.Toggle("Авто краш сервера", ref ServerCrashThread.AlwaysCrash, 17);
@@ -168,7 +146,7 @@ namespace DeftHack.Components.UI.Menu.Tabs
 					GUILayout.Space(2f);
 					GUILayout.Label("Расстояние удара: " + MiscOptions.MeleeRangeExtension, Prefab._TextStyle, Array.Empty<GUILayoutOption>());
 					GUILayout.Space(2f);
-					MiscOptions.MeleeRangeExtension = (float)Math.Round((double)Prefab.Slider(0f, 7.5f, MiscOptions.MeleeRangeExtension, 175), 1);
+					MiscOptions.MeleeRangeExtension = (float)System.Math.Round((double)Prefab.Slider(0f, 7.5f, MiscOptions.MeleeRangeExtension, 175), 1);
 				}
 				GUILayout.Space(5f);
 				bool setTimeEnabled = MiscOptions.SetTimeEnabled;
@@ -177,7 +155,7 @@ namespace DeftHack.Components.UI.Menu.Tabs
 					GUILayout.Label("ТЕКУЩЕЕ ВРЕМЯ", Prefab._TextStyle, new GUILayoutOption[0]);
 					GUILayout.Label("Время: " + MiscOptions.Time, Prefab._TextStyle, new GUILayoutOption[0]);
 					GUILayout.Space(2f);
-					MiscOptions.Time = (float)Math.Round((double)Prefab.Slider(0f, 0.9f, MiscOptions.Time, 175), 2);
+					MiscOptions.Time = (float)System.Math.Round((double)Prefab.Slider(0f, 0.9f, MiscOptions.Time, 175), 2);
 					GUILayout.Space(8f);
 				}
 				GUILayout.Space(5f);
@@ -187,7 +165,7 @@ namespace DeftHack.Components.UI.Menu.Tabs
 					GUILayout.Label("ВРЕМЯ СНЯТИЯ ПОСТРОЕК", Prefab._TextStyle, new GUILayoutOption[0]);
 					GUILayout.Label("Время снятия: " + MiscOptions.SalvageTime + " секунда", Prefab._TextStyle, new GUILayoutOption[0]);
 					GUILayout.Space(2f);
-					MiscOptions.SalvageTime = (float)Math.Round((double)Prefab.Slider(0f, 10f, MiscOptions.SalvageTime, 175));
+					MiscOptions.SalvageTime = (float)System.Math.Round((double)Prefab.Slider(0f, 10f, MiscOptions.SalvageTime, 175));
 					bool flag24 = MiscOptions.SalvageTime == 0f;
 					if (flag24)
 					{

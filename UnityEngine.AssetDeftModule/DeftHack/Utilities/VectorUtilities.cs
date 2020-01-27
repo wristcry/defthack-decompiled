@@ -20,13 +20,13 @@ namespace DeftHack.Utilities
 			vector.x = start.x - point.x;
 			vector.y = start.y - point.y;
 			vector.z = start.z - point.z;
-			return Math.Sqrt((double)(vector.x * vector.x + vector.y * vector.y + vector.z * vector.z));
+			return System.Math.Sqrt((double)(vector.x * vector.x + vector.y * vector.y + vector.z * vector.z));
 		}
 
 		// Token: 0x060000AA RID: 170 RVA: 0x00007C3C File Offset: 0x00005E3C
 		public static double GetMagnitude(Vector3 vector)
 		{
-			return Math.Sqrt((double)(vector.x * vector.x + vector.y * vector.y + vector.z * vector.z));
+			return System.Math.Sqrt((double)(vector.x * vector.x + vector.y * vector.y + vector.z * vector.z));
 		}
 
 		// Token: 0x060000AB RID: 171 RVA: 0x00007C80 File Offset: 0x00005E80
@@ -39,7 +39,7 @@ namespace DeftHack.Utilities
 		public static double GetAngleDelta(Vector3 mainPos, Vector3 forward, Vector3 target)
 		{
 			Vector3 lhs = VectorUtilities.Normalize(target - mainPos);
-			return Math.Atan2(VectorUtilities.GetMagnitude(Vector3.Cross(lhs, forward)), (double)Vector3.Dot(lhs, forward)) * 57.295779513082323;
+			return System.Math.Atan2(VectorUtilities.GetMagnitude(Vector3.Cross(lhs, forward)), (double)Vector3.Dot(lhs, forward)) * 57.295779513082323;
 		}
 	}
 }

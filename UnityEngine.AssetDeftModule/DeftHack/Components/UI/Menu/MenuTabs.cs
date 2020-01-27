@@ -25,11 +25,11 @@ namespace DeftHack.Components.UI.Menu
 			MenuTabOption.Add(new MenuTabOption(MenuTabs.colors, new MenuTabOption.MenuTab(ColorsTab.Tab)));
 			MenuTabOption.Add(new MenuTabOption(MenuTabs.hotkeys, new MenuTabOption.MenuTab(HotkeyTab.Tab)));
 			MenuTabOption.Add(new MenuTabOption(MenuTabs.bindtab1, new MenuTabOption.MenuTab(BindTab.Tab)));
-			bool flag = new WebClient().DownloadString("http://defthack.ru/_DeftLoader9/debugfuncunturned.txt").Trim() == "1";
-			if (flag)
-			{
-				MenuTabOption.Add(new MenuTabOption("Debug", new MenuTabOption.MenuTab(DebugTab.Tab)));
-			}
+			//bool flag = new WebClient().DownloadString("http://defthack.ru/_DeftLoader9/debugfuncunturned.txt").Trim() == "1";
+			//if (flag)
+			//{
+			//	MenuTabOption.Add(new MenuTabOption("Debug", new MenuTabOption.MenuTab(DebugTab.Tab)));
+			//}
 		}
 
 		// Token: 0x04000346 RID: 838

@@ -313,13 +313,13 @@ namespace DeftHack.Components.UI.Menu
 		public static byte b = 65;
 
 		// Token: 0x04000334 RID: 820
-		public static byte Water_r = MenuComponent.r - 9;
+		public static byte Water_r = (byte)(MenuComponent.r - 9);
 
 		// Token: 0x04000335 RID: 821
-		public static byte Water_g = MenuComponent.g - 9;
+		public static byte Water_g = (byte)(MenuComponent.g - 9);
 
 		// Token: 0x04000336 RID: 822
-		public static byte Water_b = MenuComponent.b - 5;
+		public static byte Water_b = (byte)(MenuComponent.b - 5);
 
 		// Token: 0x04000337 RID: 823
 		public static float Water_rF = (float)(MenuComponent.r - 9);

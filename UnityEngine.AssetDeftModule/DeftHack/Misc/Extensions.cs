@@ -24,7 +24,7 @@ namespace DeftHack.Misc
 		// Token: 0x06000132 RID: 306 RVA: 0x0000C154 File Offset: 0x0000A354
 		public static IEnumerable<T> TakeLast<T>(this IEnumerable<T> source, int N)
 		{
-			return source.Skip(Math.Max(0, source.Count<T>() - N));
+			return source.Skip(System.Math.Max(0, source.Count<T>() - N));
 		}
 
 		// Token: 0x06000133 RID: 307 RVA: 0x0000C17C File Offset: 0x0000A37C

@@ -1,5 +1,5 @@
 ﻿using System;
-using Assembly_CSharp;
+
 using DeftHack.Misc.Classes.ESP;
 using DeftHack.Misc.Enums;
 using DeftHack.Options;
@@ -414,15 +414,6 @@ namespace DeftHack.Components.UI.Menu.Tabs
 				Prefab.Toggle("Игроки в ванише", ref ESPOptions.ShowVanishPlayers, 17);
 				Prefab.Toggle("Камера заднего вида", ref MirrorCameraOptions.Enabled, 17);
 				GUILayout.Space(5f);
-				bool enabled = MirrorCameraOptions.Enabled;
-				if (enabled)
-				{
-					bool flag = Prefab.Button("Вернуть", 100f, 25f, Array.Empty<GUILayoutOption>());
-					if (flag)
-					{
-						Main.CamReset();
-					}
-				}
 			});
 			Prefab.MenuArea(new Rect(230f, 185f, 236f, 250f), "Переключатели", delegate
 			{

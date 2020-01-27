@@ -485,14 +485,14 @@ namespace DeftHack.Components.UI.Menu
 			if (flag2)
 			{
 				result = true;
-				listEntry = Math.Max(0, listEntry - 1);
+				listEntry = System.Math.Max(0, listEntry - 1);
 			}
 			bool flag3 = Prefab.AbsButton(new Rect(position.x + position.width - position.height, position.y, position.height, position.height), ">", Array.Empty<GUILayoutOption>());
 			bool flag4 = flag3;
 			if (flag4)
 			{
 				result = true;
-				listEntry = Math.Min(listContent.Length - 1, listEntry + 1);
+				listEntry = System.Math.Min(listContent.Length - 1, listEntry + 1);
 			}
 			Prefab._TextStyle.alignment = TextAnchor.UpperLeft;
 			Prefab._TextStyle.fontSize = fontSize;
